@@ -1,6 +1,5 @@
 /*
 Ref: https://docs.oracle.com/javase/tutorial/java/data/numberformat.html
-
 integer format with string
 */
 
@@ -19,12 +18,13 @@ tM 	    	A date & time conversion—minutes in 2 digits, with leading zeroes as 
 tp 	    	A date & time conversion—locale-specific am/pm (lower case).
 tm 	    	A date & time conversion—months in 2 digits, with leading zeroes as necessary.
 tD 	    	A date & time conversion—date as %tm%td%ty
-  	08 	Eight characters in width, with leading zeroes as necessary.
-  	+ 	Includes sign, whether positive or negative.
-  	, 	Includes locale-specific grouping characters.
-  	- 	Left-justified..
-  	.3 	Three places after decimal point.
-  	10.3 	Ten characters in width, right justified, with three places after decimal point.
+
+08    	Eight characters in width, with leading zeroes as necessary.
++ 	    Includes sign, whether positive or negative.
+, 	    Includes locale-specific grouping characters.
+- 	    Left-justified..
+.3 	    Three places after decimal point.
+10.3  	Ten characters in width, right justified, with three places after decimal point.
 
 The following program shows some of the formatting that you can do with format. The output is shown within double quotes in the embedded comment:
 
@@ -58,3 +58,53 @@ public class TestFormat {
       System.out.format("%tD%n", c);    // -->  "05/29/06"
     }
 }
+
+
+
+
+System.out.printf("%-14s %03d %n", s1, x); 
+================================
+java           100 
+cpp            065 
+python         050 
+================================
+
+
+
+System.out.printf("%-14s %09d %n", s1, x); 
+================================
+java           000000100 
+cpp            000000065 
+python         000000050 
+================================
+
+
+
+System.out.printf("%-14s %15d %n", s1, x); 
+Your Output (stdout)
+================================
+java                       100 
+cpp                         65 
+python                      50 
+================================
+
+
+
+
+System.out.printf("%14s %03d %n", s1, x); 
+Your Output (stdout)
+
+================================
+          java 100 
+           cpp 065 
+        python 050 
+================================
+
+
+System.out.printf("%-14s %04d %n", s1, x); 
+================================
+java           0100 
+cpp            0065 
+python         0050 
+================================
+
