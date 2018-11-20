@@ -1,3 +1,18 @@
+/*
+Using "if-else" you can perform decision making in Java. See the flowchart below (taken from wikipedia):
+
+1446563087-4ec019a919-332px-If-Then-Else-diagram.svg
+
+This problem will test your knowledge on "if-else" statements.
+Given an integer NN as input, check the following:
+
+    If N is odd, print "Weird".
+    If N is even and, in between the range of 2 and 5(inclusive), print "Not Weird".
+    If N is even and, in between the range of 6 and 20(inclusive), print "Weird".
+    If N is even and N>20N>20, print "Not Weird".
+*/
+
+
 import java.io.*;
 import java.math.*;
 import java.security.*;
