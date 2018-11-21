@@ -1,0 +1,14 @@
+/*Add odd numbers between a closed range to an array*/
+
+
+static int[] oddNumbers(int l, int r) {
+
+    int[] newFinalarray = new int[((r - l) / 2) + 1]; //defining new array size here
+    for (int i = l % 2 == 0 ? l : l + 1, j = 0;    i <= r;     i += 2, j++)
+        theArray[j] = i;
+
+
+    return newFinalarray;
+
+}
+
