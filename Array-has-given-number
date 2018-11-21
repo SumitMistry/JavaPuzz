@@ -1,0 +1,61 @@
+/*
+Complete the findNumber function in the editor below.
+It has 2 parameters:   
+An array of integers, arr, denoting the elements in the array.    
+An integer, k, denoting the element to be searched in the array.
+
+The function must return a string "YES" or "NO" denoting if the element is present in the array or not.
+
+Given the array = [1, 2, 3, 4, 5], we want to find the element 1 if it is present or not. We can find the element 1 at index = 0. Therefore we print "YES".
+
+Given the array [2, 3, 1] and k = 5. There is no element 5 in the array and therefore we print "NO".
+
+*/
+
+    static String findNumber(List<Integer> arr, int k) {
+
+		if (arr.contains(k)) return "YES"; else return "NO";
+
+---------------------
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+
+    // Complete the findNumber function below.
+    static String findNumber(List<Integer> arr, int k) {
+
+		if (arr.contains(k)) return "YES"; else return "NO";
+
+    }
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int arrCount = Integer.parseInt(bufferedReader.readLine().trim());
+
+        List<Integer> arr = new ArrayList<>();
+
+        for (int i = 0; i < arrCount; i++) {
+            int arrItem = Integer.parseInt(bufferedReader.readLine().trim());
+            arr.add(arrItem);
+        }
+
+        int k = Integer.parseInt(bufferedReader.readLine().trim());
+
+        String res = findNumber(arr, k);
+
+        bufferedWriter.write(res);
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
