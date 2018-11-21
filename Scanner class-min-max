@@ -1,0 +1,31 @@
+/*
+iterate left to right for all given numbers scan...
+*/
+
+
+
+
+import java.util.Scanner;
+public class RangePrinter {
+    public static void main(String[] args) {
+
+                        // create a scanner instance for user input
+        Scanner leftright = new Scanner(System.in);
+
+        System.out.println("Enter the first number");
+
+                       // get user input for min range
+        int min=leftright.nextInt();
+
+        System.out.println("Enter a second number");
+
+                        // get user input for max range
+        int max=leftright.nextInt();
+
+        for (int i=min; i < max + 1; i++)
+        {
+            System.out.println(i);
+        }
+
+   }
+}
