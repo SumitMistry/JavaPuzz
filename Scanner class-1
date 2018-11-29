@@ -1,0 +1,37 @@
+
+// Scanner class 
+Sample Input
+42
+100
+125
+
+Sample Output
+42
+100
+125
+//
+
+import java.util.*;
+
+public class Solution {
+
+
+    public static void main(String[] args) {
+       
+        Scanner scanner = new Scanner(System.in);
+        String myString = scanner.next();
+        
+        int myInteger0 = scanner.nextInt();
+        int myInteger1 = scanner.nextInt();
+        int myInteger2 = scanner.nextInt();
+
+        scanner.close();
+        
+        System.out.println(myString);
+        System.out.println(myInteger0);
+        System.out.println(myInteger1);
+        System.out.println(myInteger2);
+
+        
+    }
+}
