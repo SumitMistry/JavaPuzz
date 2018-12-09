@@ -1,0 +1,64 @@
+/*Draw chessboard using 2 for loop basic
+  
+  
+  */
+  
+            
+            
+            for ( row = 0;  row < 8;  row++ ) {                / row creation ----
+               for ( col = 0;  col < 8;  col++ ) {       / column creation ----
+               
+                   x = 20*col;
+                   y = 20*row;
+                   
+                   if ( (row % 2) == (col % 2) )
+                      g.setColor(Color.white);
+                   else
+                      g.setColor(Color.black);
+                   g.fillRect(x,y,20,20);
+               }
+            }
+            
+            
+            
+            
+            
+            
+            
+            ------------Full Method--------
+            
+            
+    import java.awt.*;
+    import java.applet.*;
+    
+    public class Checkerboard extends Applet {
+      
+       /*  This applet draws a white-and-black checkerboard.
+           It is assumed that the size of the applet is 40  
+           by 40 pixels.
+       */
+    
+       public void paint(Graphics g) {
+          
+          int row;   // Row number, from 0 to 7
+          int col;   // Column number, from 0 to 7
+          int x,y;   // Top-left corner of square
+       
+          for ( row = 0;  row < 8;  row++ ) {
+          
+             for ( col = 0;  col < 8;  col++) {
+                x = col * 20;
+                y = row * 20;
+                if ( (row % 2) == (col % 2) )
+                   g.setColor(Color.red);
+                else
+                   g.setColor(Color.black);
+                g.fillRect(x, y, 20, 20);
+             } 
+          
+          } // end for row
+       
+       }  // end paint()
+
+    }  // end class
+               
